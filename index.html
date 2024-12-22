@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        body {
+            font-family: 'Quintessential', cursive;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #08140c, #a59996);
+            color: #611b0ace;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background:url(https://i.pinimg.com/originals/7a/f8/ce/7af8ced6fc14a1f2840b72187ba19248.gif);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #326c86dc;
+        }
+        header p {
+            font-size: 1.5rem;
+        }
+        .timeline, .poems, .gallery {
+            
+            margin: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        .timeline h2, .poems h2, .gallery h2 {
+            color: #7a0d03;
+        }
+        .timeline ul {
+            list-style: none;
+            padding: 0;
+        }
+        .timeline li {
+            margin: 1rem 0;
+        }
+        .poem {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-left: 4px solid #b1716b;
+            background: #fff;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 2rem;
+        }
+        .song-section {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+.song-section h2 {
+    font-family: 'Quintessential', cursive;
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+audio {
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+}
+.audio-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#play-btn {
+    font-size: 2rem;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.3s;
+}
+
+#play-btn:hover {
+    background: #e85750;
+    transform: scale(1.1);
+}
+
+audio {
+    display: none; /* Hide the default audio controls */
+}
+
+
+.timeline h2, .poems h2, .gallery h2 {
+    font-size: 3rem; 
+}
+body {
+    font-size: 20px; /* Adjust the size as needed */
+}
+.song-section {
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    50% {
+        background: rgba(255, 200, 200, 0.9);
+    }
+    100% {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+}
+.lyrics-gallery {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    font-family: 'Quintessential', cursive;
+}
+
+.lyrics-gallery h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+.lyrics-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.lyrics-images {
+    display: flex;
+    overflow-x: auto; /* Horizontal scrolling */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.lyrics-images img {
+    flex-shrink: 0;
+}
+
+
+.lyrics-images img {
+    width: 100%;
+    max-width: 300px; /* Adjust this for your image size */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.lyrics-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    
+}
+.banner {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: url('https://i.pinimg.com/originals/4f/f0/88/4ff088795aff41e835671f1479fa0366.gif') no-repeat center center/cover; /* Replace with your image */
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.banner-content {
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    font-family: 'Quintessential', cursive;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Birthday, My Love!</h1>
+        <p>Here's a special website made just for you.</p>
+    </header>
+
+    <section class="timeline">
+        <h2>Our Timeline</h2>
+        <ul>
+            <li><strong>Day we met in person :</strong> [September 1th,2024] - [The moment I discovered that I had truly found my person was unforgettable. It was a feeling of pure joy, as if everything in my life had come together perfectly. We shared laughter, warmth, and an unspoken connection that filled my heart with happiness. Those moments spent together felt like the highlight of my existence, a time where everything else faded away, leaving just us in our little world]</li>
+            <li><strong>second time:</strong> [september 29th ] - [tThe moment you took my first kiss, everything shifted for me. It was as if the world around us faded away, leaving just the two of us in that fleeting instant. Your lips brushed against mine gently, igniting feelings I had never experienced before. In that magical second, my perception of you transformed entirely, and I found myself captivated by you in a way I could never have imagined I do see you as ]</li>
+            <li><strong>Other milestones:</strong> [december 19th ,2024 ]</li> The moment a stunning and remarkable girl, with a captivating presence, agreed to me being her girlfriend 
+        </ul>
+    </section>
+
+    <section class="poems">
+        <h2>Poems for You</h2>
+        <div class="poem">
+            <p><em>"
+                <br>كلماتك وصوتك تنير أفق أيامي القاتمة، 
+                <br>وحبك يلهب شغاف روحي.  
+                <br>في يوم ميلادك، أود أن أعبّر  
+                <br>إنك نبض قلبي في الظروف جميعهم.  ."</em></p>
+        </div>
+        <div class="poem">
+            <p><em>"<br>ما زلت أستحضر في ذاكرتي كيف كنت مغرمًا بسحر عينيك وروعة روحك. جمالك ترك أثراً عميقاً في كياني، كأنه لمسة ملاك استقرت في أعماق قلبي وعقلي، كما يترك الختم على الأوراق ليخبر كل من يود الاستحواذ عليه أن هناك من قد استحوذ عليه مسبقاً.
+                نعم، تتدفق دموعي كلما استحضر قلبي ذكريات تلك اللحظات التي كنت فيها غافلاً، مفتوناً بجمالك، أسعى جاهدًا لإخفاء مشاعري تحت قناع الحذر. ومن كان يدري أنك كنت تدركين كل خفقة في صدري، حيث كنتِ تخوضين أيضًا غمار نفس المشاعر المضطربة. شعرت وكأنني كنت أسيرًا في غفوة، بينما كنتِ تتمتعين بجلاء تام لما يجول في أعماقي، لكنك اخترتِ أن تحافظي على ذلك السر في أحضان قلبك. وعندما انكشفت لي الحقيقة، غمرتني سكينة عميقة، كأن الخوف الذي كان يعصف بروحي قد تلاشى، مانحًا لي فسحة من السلام الداخلي التي سمحت لي بالتعبير عن مشاعري نحوك، وتحريرها لتزدهر بلا قيود. شعرت ببهجة تفوق الوصف عندما اكتشفت أن من ظننتُ أنني لا أملك أي فرصة معه يحمل حتى أدنى ذرة من العواطف تجاهي! ومن كان يظن أن الأمور ستتطور حتى أُصبح ملكك قلبًا وروحًا.."</em></p>
+        </div>
+    </section>
+    
+
+    <section class="gallery">
+        <h2>Photo Gallery</h2>
+        <sub>all the happy moments and details with my love </sub>
+        <img src="images/image1.jpg" alt="Memory 1" loading="lazy">
+        <img src="images/image2.jpg" alt="Memory 2" loading="lazy">
+        <img src="images/image3.jpg" alt="Memory 3" loading="lazy">
+        <img src="images/image5.jpg" alt="Memory 4" loading="lazy">
+        <img src="images/image10.jpg" alt="Memory 5" loading="lazy">
+        <img src="images/image4.jpg" alt="Memory 6"loading="lazy">
+        <img src="images/image9.jpg" alt="Memory 7"loading="lazy">
+        <img src="images/image8.jpg" alt="Memory 8"loading="lazy">
+        <img src="images/image7.jpg" alt="Memory 9"loading="lazy">
+        <img src="images/image 4.jpg" alt="Memory 10"loading="lazy">
+        <img src="images/image6.jpg" alt="Memory 11"loading="lazy">
+    </section>
+    <section class="song-section">
+        <h2>Special Song for You</h2>
+        <div class="audio-player">
+            <button id="play-btn">&#9658;</button>
+            <audio id="audio">
+                <source src="images/Romantic Lover.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="images/efce1b13-2ebd-4b12-b1c0-6a6b87dfd26c.jpg" alt="Album Art" style="max-width: 200px; border-radius: 10px;">
+
+        </div>
+    </section>
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Special Song Lyrics</h1>
+            <p>A heartfelt melody just for you</p>
+        </div>
+    </section>
+
+
+    <section class="lyrics-gallery">
+        <h2>Song Lyrics</h2>
+        <div class="lyrics-images">
+            <a href="lyrics1.jpg" data-lightbox="lyrics-gallery">
+                <img src="images/lyrics1.jpg" alt="Verse 1">
+            </a>
+            <a href="lyrics2.jpg" data-lightbox="lyrics-gallery">
+                <img src="images/lyrics2.jpg" alt="Verse 2">
+            </a>
+            <a href="lyrics3.jpg" data-lightbox="lyrics-gallery">
+                <img src="images/lyrics3.jpg" alt="Verse 3">
+            </a>
+            <a href="lyrics4.jpg" data-lightbox="lyrics-gallery">
+                <img src="images/lyrics4.jpg" alt="Verse 4">
+            </a>
+            <a href="lyrics5.jpg" data-lightbox="lyrics-gallery">
+                <img src="images/lyrics5.jpg" alt="Verse 5">
+            </a>
+            
+    </div>
+</section>
+
+    </section>
+    
+    
+    <footer>
+        <p>With all my love, always and forever &hearts;</p>
+    </footer>
+</body>
+</html>
